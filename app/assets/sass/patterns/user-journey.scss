@@ -1,0 +1,99 @@
+
+/* User Journey */////////////////////////////////////////////////
+
+/* Styling for the container of the journey pages */
+.journey-pages {
+  display: flex; /* display the journey pages side by side */
+  flex-wrap: nowrap; /* don't wrap the journey pages */
+  overflow-x: auto; /* allow horizontal scrolling */
+  overflow-y: hidden; /* hide vertical scrolling */
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* Styling for each individual journey page */
+.journey-page {
+  width: 160px; /* set a fixed width for each journey page */
+  margin-right: 0px; /* add margin to the right of each journey page */
+  margin-bottom: 20px;
+  text-align: left;
+  height: 210px; /* set the height to the same height as the iframe */
+  position: relative;
+  padding-right: 10px; /* add padding to the right of each journey page */
+}
+
+/* Styling for the iframe within each journey page */
+.journey-page iframe {
+  width: 400px;
+  height: 400px;
+  border: none;
+  transform: scale(0.4);
+  transform-origin: top left;
+  border: 5px solid #b1b4b6;
+  margin-top: 12px;
+  min-width: 400px; /* set a minimum width for the iframe */
+  min-height: 400px; /* set a minimum height for the iframe */
+  pointer-events: none; /* Disable pointer events on the iframe */
+}
+
+
+/* Styling for the journey stage */
+.journey-stage {
+  margin-bottom: 35px;
+}
+
+/* Styling for the title of each journey stage */
+.journey-stage-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the heading within each journey stage title */
+.journey-stage-title h3 {
+  margin: 0;
+}
+
+/* Styling for the link within each journey stage title */
+.journey-link {
+  margin-left: auto;
+}
+
+/* Styling for the scroll bar track */
+.journey-pages::-webkit-scrollbar {
+  height: 10px; /* Set the height of the scrollbar to 10px */
+}
+
+/* Styling for the scroll bar thumb */
+.journey-pages::-webkit-scrollbar-thumb {
+  background-color: #bfc1c3; /* Set the background color of the scrollbar thumb */
+  border-radius: 10px; /* Round the corners of the scrollbar thumb */
+}
+
+/* Styling for the scroll bar track area */
+.journey-pages::-webkit-scrollbar-track {
+  background-color: #f2f2f2; /* Set the background color of the scrollbar track */
+  border-radius: 10px; /* Round the corners of the scrollbar track */
+}
+
+/* Styling for the corner of the scroll bar */
+.journey-pages::-webkit-scrollbar-corner {
+  background-color: #f2f2f2; /* Set the background color of the scrollbar corner */
+}
+
+
+
+/* Styling for the arrow container */
+.arrow-container {
+  flex: 0 0 auto; /* Do not grow or shrink the arrow container */
+  margin-right:5px; /* Add space between arrows and iframes */
+  margin-left: 5px; /* Add space between arrows and iframes */
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the right arrow */
+.arrow {
+  font-size: 40px; /* adjust the arrow size */
+  color: #1d70b8; /* arrow color */
+}

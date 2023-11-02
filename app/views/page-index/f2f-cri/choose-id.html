@@ -1,0 +1,318 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Enter your date of birth
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l page-heading">Choose a photo ID you can take to a Post Office</h1>
+
+
+      <p>You cannot use a photocopy or digital copy of your photo ID.</p>
+      <p>Your photo ID must not have expired. </p>
+      <br>
+
+      <!-- <p>The document must be an original and in your current name. Photo or scanned copies will not be accepted.</p> -->
+
+      <form action="offline-select-document-triage-error" method="post">
+
+
+<!--
+
+        
+
+<div class="govuk-form-group">
+
+<div class="govuk-radios govuk-radios"
+data-module="govuk-radios">
+
+
+ 
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1" name="offline-doc-check1" type="radio" value="UK passport~./offline-passport-details" aria-describedby="offline-doc-check1-item-hint">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1">
+UK passport
+</label>
+ 
+ <div id="offline-doc-check1-item-hint" class="govuk-hint govuk-radios__hint">
+If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date
+</div>
+ 
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+            
+
+<div class="govuk-form-group">
+
+<div class="govuk-radios govuk-radios"
+data-module="govuk-radios">
+
+
+ 
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check2" name="offline-doc-check2" type="radio" value="Biometric residence permit~./offline-brp-details">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check2">
+Biometric residence permit (BRP)
+</label>
+ 
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+                
+
+<div class="govuk-form-group">
+
+<div class="govuk-radios govuk-radios"
+data-module="govuk-radios">
+
+
+ 
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check3" name="offline-doc-check3" type="radio" value="UK photocard driving licence~./offline-driving-licence">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check3">
+UK photocard driving licence
+</label>
+ 
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+                    
+
+<div class="govuk-form-group">
+
+<div class="govuk-radios govuk-radios"
+data-module="govuk-radios">
+
+
+ 
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check4" name="offline-doc-check4" type="radio" value="Non-UK passport~./offline-passport-details">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check4">
+Non-UK passport
+</label>
+ 
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+                        hint: {
+                               text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date"
+                              }
+
+-->
+
+                        
+
+<div class="govuk-form-group">
+
+<div class="govuk-radios govuk-radios" data-module="govuk-radios">
+
+
+ 
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1" name="offline-doc-check1" type="radio" value="UK passport~./offline-passport-details" aria-describedby="offline-doc-check1-item-hint">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1">
+UK passport
+</label>
+ 
+ <div id="offline-doc-check1-item-hint" class="govuk-hint govuk-radios__hint">
+If your UK passport has expired, you can still use it to prove your identity up until 18 months after its expiry date.
+</div>
+ 
+</div>
+
+
+
+
+
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1-2" name="offline-doc-check1" type="radio" value="Non-UK passport~./offline-passport-expiry-check">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1-2">
+<p>Non-UK passport</p>
+</label>
+ 
+</div>
+
+
+
+
+
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1-3" name="offline-doc-check1" type="radio" value="UK driving licence~./offline-driving-licence" aria-describedby="offline-doc-check1-3-item-hint">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1-3">
+UK photocard driving licence
+</label>
+ 
+ <div id="offline-doc-check1-3-item-hint" class="govuk-hint govuk-radios__hint">
+The address on your driving licence must be the same as your current address.
+</div>
+ 
+</div>
+
+
+
+
+
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1-4" name="offline-doc-check1" type="radio" value="Biometric residence permit~./offline-brp-details">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1-4">
+<p>Biometric residence permit (BRP)</p>
+</label>
+ 
+</div>
+
+
+
+
+
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1-5" name="offline-doc-check1" type="radio" value="EU photocard driving licence~./offline-licence-expiry-check" aria-describedby="offline-doc-check1-5-item-hint">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1-5">
+European Union (EU) photocard driving licence
+</label>
+ 
+ <div id="offline-doc-check1-5-item-hint" class="govuk-hint govuk-radios__hint">
+This must be a plastic photocard, not a paper or handwritten licence. If it has your address on it, it must be your current address.
+</div>
+ 
+</div>
+
+
+
+
+
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1-6" name="offline-doc-check1" type="radio" value="National Identity Card from an EEA country~./offline-ni-expiry-check" aria-describedby="offline-doc-check1-6-item-hint">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1-6">
+National identity card from a European Economic Area (EEA) country
+</label>
+ 
+ <div id="offline-doc-check1-6-item-hint" class="govuk-hint govuk-radios__hint">
+This must be a plastic photocard, not a paper or handwritten card. If it has your address on it, it must be your current address.
+</div>
+ 
+</div>
+
+
+
+
+
+<div class="govuk-radios__divider">or</div>
+
+
+
+
+
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" id="offline-doc-check1-8" name="offline-doc-check1" type="radio" value="I do not have any of these documents~./fallback">
+ <label class="govuk-label govuk-radios__label" for="offline-doc-check1-8">
+<p>I do not have any of these documents</p>
+</label>
+ 
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+  </form>
+
+
+     
+
+
+
+</div>
+</div>
+
+
+{% endblock %}

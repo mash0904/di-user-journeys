@@ -1,0 +1,28 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+<section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Get help with your application</h2>
+    <ul class="govuk-list">
+        <li>Telephone: 0808 157 0001</li>
+        <li>Textphone: 0808 157 0002</li>
+        <li class="govuk-!-margin-top-5"><a href="#" class="govuk-link">Relay UK</a> (if you cannot hear or speak on the phone): 18001 then 0808 157 0003</li>
+        <li class="govuk-!-margin-top-5"><a href="#" class="govuk-link">Video relay service</a> for British Sign Language (BSL) users (<a href="#" class="govuk-link">Check you can use the video relay service</a>)</li>
+        <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+    </ul>
+    <p class="govuk-body">
+        <a class="govuk-link" href="#">Find out about call charges</a>
+    </p>
+</div>
+</div>
+</section> 
+
+{% endblock %}

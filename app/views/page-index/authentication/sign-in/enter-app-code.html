@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Enter authenticator code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Enter the 6 digit security code shown in your authenticator app",
+    classes: "govuk-label--l",
+    isPageHeading: true
+    
+  },
+  classes: "govuk-input--width-10",
+  id: "event-name",
+  name: "event-name"
+}) }}
+
+
+ <form class="form" action="/url/of/next/page" method="post">
+
+
+        <button type="Submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+          Continue
+      </button>
+
+      
+      
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

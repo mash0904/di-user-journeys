@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Page not found
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+         
+      <form class="form" action="/url/of/next/page" method="post">
+
+      <h1 class="govuk-heading-l">
+       Page not found
+
+      </h1>
+
+      <p>If you typed the web address, check it's correct.</p>
+
+      <p>If you pasted the web address, check you copied the entire address.</p>
+
+      <p>You can also go back to the service you were trying to use and start again. You can look for the service using your search engine or find it from the GOV.UK homepage.</p>
+
+   
+        <button class="govuk-button" data-module="govuk-button">Go to the GOV.UK homepage</button>
+        
+
+      </form>
+
+      <a href="#" class="govuk-link">Contact the GOV.UK account team (opens in a new tab)</a>
+
+    </div>
+  </div>
+
+{% endblock %}

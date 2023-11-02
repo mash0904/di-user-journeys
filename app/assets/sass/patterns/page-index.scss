@@ -1,0 +1,88 @@
+
+/* Index page *//////////////////////////////////////////////////////////////////////////////
+
+/* Set up a flexbox layout with equal spacing between elements */
+.page-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1400px; /* adjust as needed */
+}
+
+/* Styles for each stage on the page */
+.page-index__stage {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.page-index__stage-header {
+  background-color: #F2F2F2;
+  padding: 5px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styles for the iframe container */
+.page-index__pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* changed to flex-start */
+  align-items: center; /* added */
+  min-height: 210px; /* set the min-height to the same height as the iframe */
+}
+
+/* Styles for each individual iframe */
+.page-index__page {
+  width: calc(20% - 10px); /* adjust the width to fit 5 iframes per row */
+  margin-bottom: 15px;
+  text-align: left;
+  height: 210px; /* set the height to the same height as the iframe */
+}
+
+.page-index__page iframe {
+  width: 400px;
+  height: 400px;
+  border: none;
+  transform: scale(0.4);
+  transform-origin: top left;
+  border: 5px solid #b1b4b6;
+  margin-top: 12px;
+  pointer-events: none; /* Disable pointer events on the iframe */
+}
+
+/* Media queries to adjust layout at different screen sizes */
+@media screen and (max-width: 1400px) {
+  .page-index__page {
+    width: calc(25% - 10px); /* adjust the width to fit 4 iframes per row */
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .page-index__page {
+    width: calc(33.33% - 10px); /* adjust the width to fit 3 iframes per row */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page-index__page {
+    width: calc(50% - 10px); /* adjust the width to fit 2 iframes per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-index__page {
+    width: 100%; /* adjust the width to fit 1 iframe per row */
+  }
+}
+
+/* Additional styles for Govspeak formatting */
+.govspeak .address,
+.govspeak .contact,
+.gem-c-govspeak .address,
+.gem-c-govspeak .contact {
+  border-left: 1px solid #b1b4b6;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}

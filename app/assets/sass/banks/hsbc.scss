@@ -1,0 +1,333 @@
+
+@font-face {
+    font-family: 'Univers Next Pro';
+    src: url('/public/fonts/UniversNextProRegular.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Univers Next Pro';
+    src: url('/public/fonts/Univers Next Pro Thin Condensed.ttf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+
+/* CSS for the header */
+.hsbc-header {
+    background-color: #fff;
+    border-bottom: 1px solid #d7d8d6;
+    height: 75px;
+    width: 100%;
+}
+    
+.hsbc-header__container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+.hsbc-header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+    
+.hsbc-header__logo img {
+    margin-top:  20px;
+    max-height: 60px;
+    margin-right: 10px;
+    width: 140px;
+}
+
+  .hsbc-h1 {
+    font-family: 'Univers Next Pro', sans-serif;
+    font-weight: 500;
+    font-size: 33px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .hsbc-h2 {
+    font-family: 'Univers Next Pro', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .hsbc-body {
+    font-family: 'Univers Next Pro', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    color: #333;
+  }
+  
+  .hsbc-grey-box {
+    background-color: #f3f2f1;
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 40px;
+
+  }
+  
+  .hsbc-inset {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .hsbc-inset__line {
+    width: 6px;
+    height: 40px;
+    background-color:  #D22730;
+    margin-right: 10px;
+  }
+  
+  .hsbc-inset__text {
+    font-family: 'Univers Next Pro', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  
+  .hsbc-inset__text h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .hsbc-grey-box ul li {
+    margin-bottom: 10px; /* adjust this value as needed */
+  }
+
+  .hsbc-label {
+    display: block;
+    font-family: 'Univers Next Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .hsbc-text-input {
+    width: 251px;
+    padding: 10px;
+    border: 2px solid #d1d1d1;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111111;
+    margin-bottom: 40px;
+  }
+
+  
+  .hsbc-text-input:focus {
+    border-color:  #D22730;
+    outline: none;
+  }
+
+  .hsbc-code-input {
+    margin-bottom: 24px;
+  }
+  
+  .hsbc-code-input-field {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #d1d1d1;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  
+  .hsbc-code-input-field:focus {
+    outline: none;
+    border-color:  #D22730;
+  }
+
+
+  .hsbc-button-group {
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 30px !important;
+  }
+  
+  .hsbc-button {
+    margin-right: 10px;
+    background-color:#D22730;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: regular;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Univers Next Pro', sans-serif;
+    margin-bottom: 30px !important;
+    }
+    
+    .hsbc-button:hover {
+    text-decoration: underline;
+    }
+    
+    .hsbc-cancel-link {
+        margin-right: 20px;
+        color: #333;
+        font-family: 'Univers Next Pro', sans-serif;
+      }
+
+      .hsbc-body-1 {
+        font-family: 'Univers Next Pro', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        color: #333;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .hsbc-h1-1 {
+        font-family: 'Univers Next Pro', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        color: #333;
+      }
+
+      .hsbc-footer__meta {
+        display: flex;
+        margin-right: -15px;
+        margin-left: -15px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: center;
+        }
+        
+        .hsbc-footer {
+        font-family: "GDS Transport",arial,sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 14px;
+        font-size: .875rem;
+        line-height: 1.1428571429;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        height: 100px;
+        border-top: 1px solid #b1b4b6;
+        color: #0b0c0c;
+        background: #0b0c0c;
+        }
+
+        .hsbc-account {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border: 2px solid #d1d1d1;
+            border-radius: 4px;
+            padding: 16px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+          }
+          
+          .hsbc-account__checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #d1d1d1;
+            border-radius: 2px;
+           
+          }
+          
+          
+          .hsbc-account__details {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+          }
+          
+          
+          .hsbc-account__name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+          }
+          
+          .hsbc-account__number,
+          .hsbc-account__sort-code {
+            font-size: 14px;
+            margin-bottom: 4px;
+          }
+          
+          .hsbc-account__balance {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+          }
+          
+          .hsbc-account__balance-label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 4px;
+          }
+          
+          .hsbc-account__balance-amount {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          .hsbc-account:hover {
+            cursor: pointer;
+          }
+          
+          .hsbc-flex-container {
+            display: flex;
+            align-items: center;
+          }
+          
+          .hsbc-flex-item {
+            margin-left: 10px;
+          }
+          
+          .hsbc-button--special {
+            background-color: #3A8481;
+            color: #fff;
+            font-size: 20px;
+            width: 300px;
+            /* add any additional styles you want for this button here */
+          }
+          
+          .hsbc-button-white {
+            background-color: #fff;
+            color: #111;
+            border: 2px solid #d1d1d1;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Univers Next Pro', sans-serif;
+            width: 620px;
+          }
+          
+          @media (max-width: 767px) {
+            .hsbc-button-white {
+              width: 300px;
+            }
+          }
+          
+          .hsbc-button-white:hover {
+            text-decoration: underline;
+            }

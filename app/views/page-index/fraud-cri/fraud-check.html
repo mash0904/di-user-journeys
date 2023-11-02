@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - We need to check your details
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+         
+      <form class="form" action="/page-index/kbv-cri/kbv-start" method="post">
+
+      <h1 class="govuk-heading-l">
+        We need to check your details
+
+      </h1>
+
+      <p>Your details will be checked against information held by another organisation.</p>
+
+      <p>This will help us protect you against online identity theft.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">Who we check your details with</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>We'll check your details with <a href="https://www.experian.co.uk/privacy/privacy-and-your-data?utm_medium=internalRef&amp;utm_source=Consumer%20Services" class="govuk-link" rel="noreferrer noopener" target="_blank">Experian (opens in new tab)</a>. This is because companies like Experian have access to information about interactions you've previously had with other organisations.</p>
+
+          <p><a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link" rel="noreferrer noopener" target="_blank">Read our privacy notice (opens in new tab)</a> if you'd like to know more about how your details will be used to prove your identity.</p>
+        </div>
+      </details>
+
+   
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Choose how to get security codes
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<body data-module="edge">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/user-research/round1/Task-2/enter-phone-number" method="post">
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "choose-security-codes",
+          value: "Text message",
+          fieldset: {
+            legend: {
+              text: "Choose how to get security codes",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "To finish creating your account, you need to choose a way to prove it's you when you sign in."
+          },
+          items: [
+            {
+              value: "Text message",
+              text: "Text message"
+            },
+            {
+              value: "Authenticator app for smartphone, tablet or computer",
+              text: "Authenticator app for smartphone, tablet or computer"
+            }
+          ]
+        }) }}
+        
+      
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is an authenticator app?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">An authenticator app creates a security code that helps confirm it's you when you sign in.</p>
+            <p class="govuk-body">An authenticator app creates a security code that helps confirm it's you when you sign in.</p>
+          </div>
+        </details>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+{% include "includes/current-footer.njk" %}
+
+{% endblock %}
+

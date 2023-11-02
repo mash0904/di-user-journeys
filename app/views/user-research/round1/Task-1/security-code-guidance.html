@@ -1,0 +1,162 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Getting a security code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "About GOV.UK One Login",
+        href: "#"
+      },
+      {
+        text: "Get help with GOV.UK One Login",
+        href: "/user-research/round1/Task-1/contact-triage"
+      },
+      {
+        text: "Getting a security code"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl">Getting a security code</h1>
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#how-to-get-security-code">
+                How to get a security code
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#no-receive-by-text">
+                If you do not receive a security code by text message
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#no-receive-by-email">
+                If you do not receive a security code by email
+
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#code-not-work">
+                If your code does not work
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <h2 class="govuk-heading-m" id="how-to-get-security-code">How to get a security code</h2>
+      
+      <p>When you create your GOV.UK One Login, you can choose to get security codes by text message or authenticator app.</p>
+
+      <p>To get security codes by text message to a non-UK mobile phone number, select ‘I do not have a UK mobile phone number’ when you are asked to enter a phone number.</p>
+
+
+
+      <h2 class="govuk-heading-m" id="no-receive-by-text">If you do not receive a security code by text message</h2>
+
+      <p>If you’re having trouble getting your security code, you can try having the code sent again by selecting the ‘send the code again’ link.</p>
+
+      <p>If you are creating an account, you should check you have entered the phone number correctly and enter it again if not. You can do this by selecting the ‘use a different phone number’ link.</p>
+
+      <p>If you still do not receive the code, it could be because your phone carrier is not able to deliver the text message containing the security code.</p>
+
+      <p class="govuk-body">This can be because:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>your phone has no reception</li>
+  <li>the sender of the text message has been blocked on your device</li>
+</ul>
+
+<p>Try <a href="#" class="govuk-link">creating a GOV.UK One Login or signing in</a> again. If you’re creating a GOV.UK One Login, make sure you enter your phone number correctly.</p>
+
+<p>If this does not work, it’s worth checking if this number has been blocked as a sender on your device.</p>
+
+<p>You can also try using an authenticator app to get a security code instead of a text message.</p>
+
+<h2 class="govuk-heading-m"  id="no-receive-by-email">If you do not receive a security code by email</h2>
+
+<p>Try <a href="#" class="govuk-link">creating a GOV.UK One Login or signing in</a> again.</p>
+
+<p>Make sure you enter your email address correctly and check your spam or junk folders.</p>
+
+<p>If you are using a work or business email, check with your IT team to make sure that emails from GOV.UK One Login are not being blocked or restricted.</p>
+
+<p>If the code does not arrive in a few minutes, select the ‘Send the code again’ link, in case there was an error.
+</p>
+
+
+
+
+<h2 class="govuk-heading-m" id="code-not-work">If your code does not work</h2>
+
+<p>There are a few reasons why the code you are entering does not work. It could be because:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>you did not enter it correctly</li>
+  <li>you requested more than one code, and the code you are entering is not the most recent code</li>
+</ul>
+
+<p>You may need to wait a short while and then try creating a GOV.UK One Login or signing in again.</p>
+
+<p>Check you have entered the code correctly, and wait a few minutes before requesting a new code.</p>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% include "includes/govuk.njk" %}
+
+{% endblock %}

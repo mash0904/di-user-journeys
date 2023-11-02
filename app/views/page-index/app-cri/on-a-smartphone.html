@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Are you on a smartphone right now?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/on-a-smartphone/answer" method="post">
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "smartphone",
+          fieldset: {
+            legend: {
+              text: "Are you on a smartphone right now?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "You have said you are not on a computer or tablet. Let us know what device you are using right now."
+          },
+          items: [
+            {
+              value: "Yes, I am on an iPhone",
+              text: "Yes, I am on an iPhone"
+            },
+            {
+              value: "Yes, I am on an Android phone",
+              text: "Yes, I am on an Android phone"
+            },
+            {
+              value: "I am not on either of these phones",
+              text: "I am not on either of these phones"
+            }
+          ]
+        }) }}
+
+        <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              How do I know if I am on an Android phone?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Popular Android phone models include Samsung, Google Pixel and OPPO. 
+          </div>
+        </details>
+        
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}
+

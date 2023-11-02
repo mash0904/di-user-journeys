@@ -1,0 +1,94 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Inset link example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post">
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "mortgage-payments",
+          fieldset: {
+            legend: {
+              text: "How much of your loan do you pay back every month?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Think about the amount you agreed to pay back every month on a personal loan. This does not include hire purchase agreements, second mortgages, home credit loans or student loans. You can find this amount on your loan agreement."
+          },
+          items: [
+            {
+              value: "UP TO £200",
+              text: "UP TO £200"
+            },
+            {
+              value: "OVER £200 UP TO £400",
+              text: "OVER £200 UP TO £400"
+            },
+            {
+              value: "OVER £400 UP TO £600",
+              text: "OVER £400 UP TO £600"
+            },
+            {
+              value: "OVER £600 UP TO £800",
+              text: "OVER £600 UP TO £800"
+            },
+            { 
+              value: "NONE OF THE ABOVE / DOES NOT APPLY",
+              text: "NONE OF THE ABOVE / DOES NOT APPLY"
+            }
+          ]
+        }) }}
+
+      
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+      <p><a class="govuk-link" href="#">I cannot answer this question</a></p>
+
+    </div>
+  </div>
+
+  <div class="govuk-inset-text">
+   
+      <a href="#" class="govuk-link" rel="noreferrer noopener">Get help with this page (opens in new tab)</a>
+
+  </div>
+    
+    </div>
+</div>
+
+{% endblock %}
+

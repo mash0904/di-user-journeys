@@ -1,0 +1,114 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Get help with GOV.UK One Login
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "About GOV.UK One Login",
+        href: "#"
+      },
+      {
+        text: "Contact GOV.UK One Login"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-xl">Contact GOV.UK One Login</h1>
+
+
+<h2 class="govuk-heading-l">When you contact us</h2>
+
+<p class="govuk-body">You will be asked for your reference code.</p>
+<p class="govuk-body">This code gives an advisor the details they need to help you.</p>
+
+<div class="govuk-notification-banner" role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Your reference code
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-body govuk-!-font-size-36"><strong>123-456</strong></p>
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+<h2 class="govuk-heading-l">When you contact us</h2>
+
+<p class="govuk-body">You will be asked for your reference code.</p>
+<p class="govuk-body">This code gives an advisor the details they need to help you.</p>
+
+<p class="govuk-body">Your reference code is:</p>
+
+
+<div class="custom-notification">
+  <p class="govuk-body govuk-!-font-size-36"><strong>123-456</strong></p>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+<h2 class="govuk-heading-l">When you contact us</h2>
+
+<p class="govuk-body">You will be asked for your reference code.</p>
+<p class="govuk-body">This code gives an advisor the details they need to help you.</p>
+
+<p class="govuk-body">Your reference code is:</p>
+
+<div class="govuk-inset-text">
+  <p class="govuk-body govuk-!-font-size-36"><strong>123-456</strong></p>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+<h2 class="govuk-heading-l">When you contact us</h2>
+
+<p class="govuk-body">You will be asked for your reference code.</p>
+<p class="govuk-body">This code gives an advisor the details they need to help you.</p>
+
+<div class="custom-govuk-inset">
+  <p class="govuk-body govuk-!-margin-bottom-2">Your reference code is:</p>
+  <p class="govuk-body govuk-!-font-size-48"><strong>123456</strong></p>
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+
+{% include "includes/govuk.njk" %}
+
+{% endblock %}
+
+
+
+
+

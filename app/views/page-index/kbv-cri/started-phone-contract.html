@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - When did you take out your mobile phone contract?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/page-index/ipv-core/proved-identity" method="post">
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "phone-contract",
+          fieldset: {
+            legend: {
+              text: "When did you take out your mobile phone contract?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Think about when you took out your personal phone contract instead of your work phone, if you have one."
+          },
+          items: [
+            {
+              value: "04/2017",
+              text: "04/2017"
+            },
+            {
+              value: "10/2017",
+              text: "10/2017"
+            },
+            {
+              value: "03/2021",
+              text: "03/2021"
+            },
+            {
+              value: "01/2021",
+              text: "01/2021"
+            },
+            { 
+              value: "NONE OF THE ABOVE / DOES NOT APPLY",
+              text: "NONE OF THE ABOVE / DOES NOT APPLY"
+            }
+          ]
+        }) }}
+
+      
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+      <p><a class="govuk-link" href="#">I cannot answer this question</a></p>
+
+    </div>
+  </div>
+
+
+{% endblock %}
+

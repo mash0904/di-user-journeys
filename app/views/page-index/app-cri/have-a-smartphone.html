@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Do you have a smartphone you can use?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/have-a-smartphone/answer" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="smartphone-choice-hint">
+            <legend class="govuk-fieldset__legend govuk-!-margin-bottom-2">
+              <h1 class="govuk-heading-l govuk-!-margin-bottom-0">Do you have a smartphone you can use?</h1>
+            </legend>
+            <div id="smartphone-choice-hint" class="govuk-hint govuk-!-margin-top-0">
+              <p class="govuk-hint govuk-!-margin-bottom-2">Some ways of confirming your identity require a smartphone.</p>
+              <p class="govuk-hint">If you can use your smartphone to confirm your identity, we will guide you to switch devices later.</p>
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="smartphone-choice" name="smartphone-choice" type="radio" value="iphone" data-pw="iphone">
+                <label class="govuk-label govuk-radios__label" for="smartphone-choice"> Yes, I have an iPhone </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="smartphone-choice-2" name="smartphone-choice" type="radio" value="android" data-pw="android">
+                <label class="govuk-label govuk-radios__label" for="smartphone-choice-2"> Yes, I have an Android phone (for example, Samsung, Google Pixel, OPPO) </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="smartphone-choice-3" name="smartphone-choice" type="radio" value="I don't have either of these" data-pw="other">
+                <label class="govuk-label govuk-radios__label" for="smartphone-choice-3">I don't have either of these</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">
+         Continue
+        </button>
+        
+    
+      </form>
+    </div>
+  </div>
+
+
+{% endblock %}
+

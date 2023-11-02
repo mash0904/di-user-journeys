@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Prove your identity
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Prove your identity
+      </h1>
+
+      <p>To apply for a basic DBS check, you need to first prove your identity.</p>
+
+      <p>You can do this online by signing in to or creating a GOV.UK One Login.</p>
+
+      <p>Your basic DBS check result will only show the name on your identity document.</p>
+
+
+      <form class="form" action="/page-index/pre-auth/identity-welcome" method="post">
+
+       
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Prove your identity in person
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>If you cannot prove your identity online with a GOV.UK account you can still continue to apply. You will still need your identity and financial documents to hand.
+              But you'll also need to go to a UK post office in person after completing your application.</p>
+              <p>You'll have 10 days to take your identity documents to a UK post office that offers the DBS ID validation service.</p>
+              <p>We’ll only start processing your application after you’ve proven your identity at a UK post office.</p>
+              <a href="#" class="govuk-link">Continue to prove your identity in person</a>
+          </div>
+        </details>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

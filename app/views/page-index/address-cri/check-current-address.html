@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Check your address
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/page-index/address-cri/started-living-here" method="post">
+
+        <h1 class="govuk-heading-l">Check your address</h1>
+       
+            <p>Make sure there are no mistakes in your current home address before you continue.</p>
+
+            <p style="text-align: left">
+              UNIT 8 WARWICK HOUSE<br>
+              18 FORGE LANE MINWORTH<br>
+              SUTTON COLDFIELD<br>
+              B76 1AH
+          </p>
+          
+
+          {{ govukRadios({
+            name: "current-address-correct",
+            fieldset: {
+              legend: {
+                text: "Is your current home address correct?",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No - there is a mistake",
+                text: "No - there is a mistake"
+              }
+            ]
+          }) }}
+  
+          <button class="govuk-button" type="submit" data-module="govuk-button"> Continue </button>
+        </form>
+    </div>
+  </div>
+
+{% endblock %}

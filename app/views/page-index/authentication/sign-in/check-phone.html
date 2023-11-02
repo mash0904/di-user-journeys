@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Check your phone
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">Check your phone</h1>
+
+      <p class="govuk-body">We sent a code to the phone number linked to your GOV.UK One Login.</p>
+
+      <p class="govuk-body">It might take a few minutes to arrive. The code will expire after 15 minutes.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="code">
+            Enter the 6 digit security code
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="code" name="code" type="text" spellcheck="false" autocomplete="one-time-code" inputmode="numeric">
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Problems with the code?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        
+        <p class="govuk-body">
+          We can 
+          <a href="/resend-code" class="govuk-link" rel="noreferrer noopener">send the code again</a>
+           if the code is not working or you did not receive it.
+        </p>
+        <p class="govuk-body">
+          
+        </p>
+        
+      </div>
+    </details>
+
+
+ <form class="form" action="/page-index/ipv-core/signed-in" method="post">
+
+
+        <button type="Submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+          Continue
+      </button>
+
+      
+      
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

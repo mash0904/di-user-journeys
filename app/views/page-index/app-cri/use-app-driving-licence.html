@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK One Login - Use passport and ID Check App
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper govuk-main-wrapper--l govuk-!-padding-top-2" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full interrupt-screen">
+
+              <input type="hidden" aria-hidden="true" value="driving licence" id="gaData">
+              <div>
+                <div class="govuk-panel govuk-panel--confirmation blue-background govuk-!-padding-top-4 govuk-!-padding-left-5 govuk-!-padding-right-5 govuk-!-padding-bottom-4 govuk-!-margin-bottom-0 govuk-!-margin-top-1">
+                  <div aria-hidden="true" class="govuk-!-text-align-left">
+                    <img class="govuk-!-text-align-left" id="gov-uk-logo" src="/public/images/gov-uk-logo.svg" alt="">
+                  </div>
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                      <h1 class="govuk-heading-l govuk-!-text-align-left govuk-!-margin-top-3 govuk-!-margin-bottom-3 white-text" data-pw="intro-app-heading"> Use your UK driving licence and a GOV.UK app to confirm your identity </h1>
+                    </div>
+                  </div>
+                  <p class="govuk-body govuk-!-text-align-left white-text govuk-!-margin-bottom-4"> Next, we will guide you to download and use the app. </p>
+                  <h2 class="govuk-body govuk-!-text-align-left white-text govuk-!-font-weight-bold govuk-!-margin-bottom-2 govuk-!-padding-top-0"> You will use the app to: </h2>
+                  <div class="govuk-!-margin-left-2">
+                    <ul class="govuk-list govuk-list--bullet govuk-!-text-align-left white-text govuk-!-margin-bottom-4">
+                      <li>take a photo of your UK driving licence</li>
+                      <li>take a scan of your face</li>
+                    </ul>
+                  </div>
+                  <div class="app-button--inverted govuk-!-text-align-left .govuk-button">
+                    <form id="form-tracking" action="/page-index/app-cri/working-camera" method="get">
+                      <button class="govuk-button govuk-!-margin-top-1 govuk-!-margin-bottom-4 govuk-!-font-weight-bold" data-module="govuk-button" data-pw="continue"> Continue </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0 govuk-!-margin-bottom-7">
+                  <div class="govuk-inset-text">
+                    <div> Prefer to not use an app? You can <a href="#" class="govuk-link" data-pw="confirm-another-way-link">confirm your identity another way</a>. </div>
+                  </div>
+                  <h2 class="govuk-heading-m govuk-!-margin-bottom-3"> How we use your data </h2>
+                  <p class="govuk-!-margin-bottom-2"> We collect your data securely and delete it when no longer needed. Read our full <a href="#" class="govuk-link"> privacy notice</a>. </p>
+                  <h2 class="govuk-heading-m govuk-!-padding-top-2 govuk-!-margin-bottom-3"> Accessibility </h2>
+                  <p class="govuk-!-padding-bottom-1"> Read our <a href="#" class="govuk-link"> accessibility statement</a>. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        </main>
+
+{% endblock %}
+

@@ -1,0 +1,293 @@
+
+
+<div class="govuk-width-container">
+        
+    <div class="gem-c-feedback govuk-!-display-none-print" data-module="feedback ga4-event-tracker" data-feedback-module-started="true" data-ga4-event-tracker-module-started="true">
+      <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabindex="-1">
+      <div class="gem-c-feedback__prompt-content">
+        <div class="gem-c-feedback__prompt-questions js-prompt-questions">
+          <div class="gem-c-feedback__prompt-question-answer">
+            <h2 class="gem-c-feedback__prompt-question">Is this page useful?</h2>
+            <ul class="gem-c-feedback__option-list">
+              <li class="gem-c-feedback__option-list-item govuk-visually-hidden" hidden="">
+                <a class="gem-c-feedback__prompt-link" data-track-category="yesNoFeedbackForm" data-track-action="ffMaybeClick" role="button" hidden="hidden" aria-hidden="true" href="/contact/govuk">
+                  Maybe
+    </a>          </li>
+              <li class="gem-c-feedback__option-list-item">
+                <button class="govuk-button gem-c-feedback__prompt-link js-page-is-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffYesClick" data-ga4-event="{&quot;event_name&quot;:&quot;form_submit&quot;,&quot;type&quot;:&quot;feedback&quot;,&quot;text&quot;:&quot;Yes&quot;, &quot;section&quot;: &quot;Is this page useful?&quot;}">
+                  Yes <span class="govuk-visually-hidden">this page is useful</span>
+                </button>
+              </li>
+              <li class="gem-c-feedback__option-list-item">
+                <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-page-is-not-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffNoClick" aria-controls="page-is-not-useful" aria-expanded="false" data-ga4-event="{&quot;event_name&quot;:&quot;form_submit&quot;,&quot;type&quot;:&quot;feedback&quot;,&quot;text&quot;:&quot;No&quot;, &quot;section&quot;: &quot;Is this page useful?&quot;}">
+                  No <span class="govuk-visually-hidden">this page is not useful</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-success js-prompt-success" role="alert" hidden="">
+          Thank you for your feedback
+        </div>
+    
+        <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-questions--something-is-wrong js-prompt-questions">
+          <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-something-is-wrong" data-track-category="Onsite Feedback" data-track-action="GOV-UK Open Form" aria-controls="something-is-wrong" aria-expanded="false" data-ga4-event="{&quot;event_name&quot;:&quot;form_submit&quot;,&quot;type&quot;:&quot;feedback&quot;,&quot;text&quot;:&quot;Report a problem with this page&quot;, &quot;section&quot;: &quot;Is this page useful?&quot;}">
+            Report a problem with this page
+          </button>
+        </div>
+      </div>
+    </div>
+    
+      <form action="/contact/govuk/problem_reports" id="something-is-wrong" class="gem-c-feedback__form js-feedback-form" data-track-category="Onsite Feedback" data-track-action="GOV.UK Send Form" method="post" hidden="">
+    
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="gem-c-feedback__error-summary gem-c-feedback__js-show js-errors" tabindex="-1" hidden=""></div>
+    
+          <input type="hidden" name="url" value="https://www.gov.uk/contact-hmrc">
+    
+          <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
+          <p id="feedback_explanation" class="gem-c-feedback__form-paragraph">Don’t include personal or financial information like your National Insurance number or credit card details.</p>
+    
+          <div class="govuk-visually-hidden" aria-hidden="true">
+            <label for="giraffe">This field is for robots only. Please leave blank</label>
+            <input id="giraffe" name="giraffe" type="text" pattern=".{0}" tabindex="-1" autocomplete="off">
+          </div>
+    
+          
+    <div class="gem-c-textarea govuk-form-group govuk-!-margin-bottom-6">
+        
+      <label for="textarea-648fb4e7" class="gem-c-label govuk-label">What were you doing?</label>
+    
+    
+    
+    
+    
+      <textarea name="what_doing" class="govuk-textarea" id="textarea-648fb4e7" rows="3" spellcheck="true" aria-describedby="feedback_explanation"></textarea>
+        
+    </div>
+    
+          
+    <div class="gem-c-textarea govuk-form-group govuk-!-margin-bottom-6">
+        
+      <label for="textarea-ba7cd81d" class="gem-c-label govuk-label">What went wrong?</label>
+    
+    
+    
+    
+    
+      <textarea name="what_wrong" class="govuk-textarea" id="textarea-ba7cd81d" rows="3" spellcheck="true"></textarea>
+        
+    </div>
+    
+          
+    
+    
+      <button class="gem-c-button govuk-button" type="submit" data-ga4-event="{&quot;event_name&quot;:&quot;form_submit&quot;,&quot;type&quot;:&quot;feedback&quot;,&quot;text&quot;:&quot;Send&quot;,&quot;section&quot;:&quot;Help us improve GOV.UK&quot;}">Send</button>
+    
+    
+    
+          <button class="govuk-button govuk-button--secondary gem-c-feedback__close gem-c-feedback__js-show js-close-form" data-track-category="Onsite Feedback" data-track-action="GOV.UK Close Form" aria-controls="something-is-wrong" aria-expanded="true">
+            Cancel
+          </button>
+        </div>
+      </div>
+    <input type="hidden" name="javascript_enabled" value="true"><input type="hidden" name="referrer" value="https://www.google.com/"><input type="hidden" name="timer" value="0"></form>
+    
+    
+    <script nonce="">
+    //<![CDATA[
+      document.addEventListener("DOMContentLoaded", function () {
+        var input = document.querySelector("#giraffe"),
+          form = document.querySelector("#something-is-wrong")
+    
+        form.addEventListener("submit", spamCapture);
+    
+        function spamCapture(e) {
+          if (input.value.length !== 0) return;
+          e.preventDefault();
+        }
+      });
+    
+    //]]>
+    </script>
+      <form action="/contact/govuk/email-survey-signup" id="page-is-not-useful" class="gem-c-feedback__form gem-c-feedback__form--email gem-c-feedback__js-show js-feedback-form" data-track-category="yesNoFeedbackForm" data-track-action="Send Form" method="post" hidden="">
+    
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds" id="survey-wrapper">
+          <div class="gem-c-feedback__error-summary js-errors" tabindex="-1" hidden=""></div>
+    
+          <input name="email_survey_signup[survey_id]" type="hidden" value="footer_satisfaction_survey">
+          <input name="email_survey_signup[survey_source]" type="hidden" value="/contact-hmrc">
+    
+          <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
+          <p id="survey_explanation" class="gem-c-feedback__form-paragraph">To help us improve GOV.UK, we’d like to know more about your visit today. We’ll send you a link to a feedback form. It will take only 2 minutes to fill in. Don’t worry we won’t send you spam or share your email address with anyone.</p>
+    
+          
+    <div class="govuk-form-group">
+    
+                
+      <label for="input-40f1019a" class="gem-c-label govuk-label">Email address</label>
+    
+    
+    
+    
+    
+    
+    
+        
+        <input aria-describedby="survey_explanation" autocomplete="email" class="gem-c-input govuk-input" id="input-40f1019a" name="email_survey_signup[email_address]" spellcheck="false" type="email">
+    </div>
+    
+          
+    
+    
+      <button class="gem-c-button govuk-button" type="submit" data-ga4-event="{&quot;event_name&quot;:&quot;form_submit&quot;,&quot;type&quot;:&quot;feedback&quot;,&quot;text&quot;:&quot;Send me the survey&quot;,&quot;section&quot;:&quot;Help us improve GOV.UK&quot;}">Send me the survey</button>
+    
+    
+    
+          <button class="govuk-button govuk-button--secondary gem-c-feedback__close js-close-form" data-track-category="yesNoFeedbackForm" data-track-action="ffFormClose" aria-controls="page-is-not-useful" aria-expanded="true">
+            Cancel
+          </button>
+    
+        </div>
+      </div>
+    </form>
+    
+    </div>
+    
+          </div>
+
+
+
+<footer class="gem-c-layout-footer govuk-footer gem-c-layout-footer--border" role="contentinfo" data-module="ga4-link-tracker" data-ga4-link-tracker-module-started="true">
+  <div class="govuk-width-container">
+      <div class="govuk-footer__navigation" data-module="gem-track-click" data-track-links-only="" data-gem-track-click-module-started="true">
+            <div class="govuk-grid-column-two-thirds govuk-!-display-none-print">
+              <h2 class="govuk-footer__heading govuk-heading-m">Topics</h2>
+                <ul class="govuk-footer__list govuk-footer__list--columns-2">
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/benefits" data-track-options="{&quot;dimension29&quot;:&quot;Benefits&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;1&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Benefits</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/births-deaths-marriages" data-track-options="{&quot;dimension29&quot;:&quot;Births, death, marriages and care&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;2&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Births, death, marriages and care</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/business" data-track-options="{&quot;dimension29&quot;:&quot;Business and self-employed&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;3&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Business and self-employed</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/childcare-parenting" data-track-options="{&quot;dimension29&quot;:&quot;Childcare and parenting&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;4&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Childcare and parenting</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/citizenship" data-track-options="{&quot;dimension29&quot;:&quot;Citizenship and living in the UK&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;5&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Citizenship and living in the UK</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/justice" data-track-options="{&quot;dimension29&quot;:&quot;Crime, justice and the law&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;6&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Crime, justice and the law</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/disabilities" data-track-options="{&quot;dimension29&quot;:&quot;Disabled people&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;7&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Disabled people</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/driving" data-track-options="{&quot;dimension29&quot;:&quot;Driving and transport&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;8&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Driving and transport</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/education" data-track-options="{&quot;dimension29&quot;:&quot;Education and learning&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;9&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Education and learning</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/employing-people" data-track-options="{&quot;dimension29&quot;:&quot;Employing people&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;10&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Employing people</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/environment-countryside" data-track-options="{&quot;dimension29&quot;:&quot;Environment and countryside&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;11&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Environment and countryside</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/housing-local-services" data-track-options="{&quot;dimension29&quot;:&quot;Housing and local services&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;12&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Housing and local services</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/tax" data-track-options="{&quot;dimension29&quot;:&quot;Money and tax&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;13&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Money and tax</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/abroad" data-track-options="{&quot;dimension29&quot;:&quot;Passports, travel and living abroad&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;14&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Passports, travel and living abroad</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/visas-immigration" data-track-options="{&quot;dimension29&quot;:&quot;Visas and immigration&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;15&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Visas and immigration</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="topicsLink" data-track-label="/browse/working" data-track-options="{&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;16&quot;,&quot;index_section&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;16&quot;,&quot;section&quot;:&quot;Topics&quot;}" href="#">Working, jobs and pensions</a>
+                      </li>
+                </ul>
+            </div>
+            <div class="govuk-grid-column-one-third govuk-!-display-none-print">
+              <h2 class="govuk-footer__heading govuk-heading-m">Government activity</h2>
+                <ul class="govuk-footer__list govuk-footer__list--columns-1">
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/government/organisations" data-track-options="{&quot;dimension29&quot;:&quot;Departments&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;1&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">Departments</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/search/news-and-communications" data-track-options="{&quot;dimension29&quot;:&quot;News&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;2&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">News</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/search/guidance-and-regulation" data-track-options="{&quot;dimension29&quot;:&quot;Guidance and regulation&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;3&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">Guidance and regulation</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/search/research-and-statistics" data-track-options="{&quot;dimension29&quot;:&quot;Research and statistics&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;4&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">Research and statistics</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/search/policy-papers-and-consultations" data-track-options="{&quot;dimension29&quot;:&quot;Policy papers and consultations&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;5&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">Policy papers and consultations</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/search/transparency-and-freedom-of-information-releases" data-track-options="{&quot;dimension29&quot;:&quot;Transparency&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;6&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">Transparency</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/government/how-government-works" data-track-options="{&quot;dimension29&quot;:&quot;How government works&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;7&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">How government works</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="governmentactivityLink" data-track-label="/government/get-involved" data-track-options="{&quot;dimension29&quot;:&quot;Get involved&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;8&quot;,&quot;index_section&quot;:&quot;2&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Government activity&quot;}" href="#">Get involved</a>
+                      </li>
+                </ul>
+            </div>
+      </div>
+
+      <hr class="govuk-footer__section-break">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          <ul class="govuk-footer__inline-list govuk-!-display-none-print" data-module="gem-track-click" data-track-links-only="" data-gem-track-click-module-started="true">
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/help" data-track-options="{&quot;dimension29&quot;:&quot;Help&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;1&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Help</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/help/privacy-notice" data-track-options="{&quot;dimension29&quot;:&quot;Privacy&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;2&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Privacy</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/help/cookies" data-track-options="{&quot;dimension29&quot;:&quot;Cookies&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;3&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Cookies</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/help/accessibility-statement" data-track-options="{&quot;dimension29&quot;:&quot;Accessibility statement&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;4&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Accessibility statement</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/contact" data-track-options="{&quot;dimension29&quot;:&quot;Contact&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;5&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Contact</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/help/terms-conditions" data-track-options="{&quot;dimension29&quot;:&quot;Terms and conditions&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;6&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Terms and conditions</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" lang="cy" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/cymraeg" data-track-options="{&quot;dimension29&quot;:&quot;Rhestr o Wasanaethau Cymraeg&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;7&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Rhestr o Wasanaethau Cymraeg</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-track-category="footerClicked" data-track-action="supportLink" data-track-label="/government/organisations/government-digital-service" data-track-options="{&quot;dimension29&quot;:&quot;Government Digital Service&quot;}" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;footer&quot;,&quot;index&quot;:{&quot;index_link&quot;:&quot;8&quot;,&quot;index_section&quot;:&quot;3&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;index_total&quot;:&quot;8&quot;,&quot;section&quot;:&quot;Support links&quot;}" href="#">Government Digital Service</a>
+              </li>
+          </ul>
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description" data-module="gem-track-click" data-track-action="copyrightLink" data-track-category="footerClicked" data-track-label="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" data-track-options="{&quot;dimension29&quot;: &quot;Open Government Licence v3.0&quot;}" data-track-links-only="" data-ga4-track-links-only="" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;section&quot;:&quot;Licence&quot;,&quot;index&quot;:{&quot;index_section&quot;:&quot;4&quot;,&quot;index_link&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;text&quot;:&quot;Open Government Licence v3.0&quot;,&quot;index_total&quot;:&quot;1&quot;,&quot;type&quot;:&quot;footer&quot;}" data-gem-track-click-module-started="true">
+          All content is available under the <a class="govuk-footer__link" href="#" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item" data-module="gem-track-click" data-track-action="copyrightLink" data-track-category="footerClicked" data-track-label="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/" data-track-options="{&quot;dimension29&quot;: &quot;© Crown copyright&quot;}" data-track-links-only="" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;section&quot;:&quot;Copyright&quot;,&quot;index&quot;:{&quot;index_section&quot;:&quot;5&quot;,&quot;index_link&quot;:&quot;1&quot;,&quot;index_section_count&quot;:&quot;5&quot;},&quot;text&quot;:&quot;© Crown copyright&quot;,&quot;index_total&quot;:&quot;1&quot;,&quot;type&quot;:&quot;footer&quot;}" data-gem-track-click-module-started="true">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="#">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>

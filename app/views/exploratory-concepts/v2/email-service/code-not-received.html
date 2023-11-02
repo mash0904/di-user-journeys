@@ -1,0 +1,175 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Code not received
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <span class="govuk-caption-l">Contact GOV.UK One Login</span>
+      <h1 class="govuk-heading-l">You did not get a security code</h1>
+
+      <form action="/exploratory-concepts/v2/email-service/confirmation" method="post" novalidate data-validate='my-form-validation'>
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "How-code-was-sent",
+  name: "How-code-was-sent",
+  value: "Email",
+  fieldset: {
+    legend: {
+      text: "How did you expect to get the security code?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Email",
+      text: "Email"
+    },
+    {
+      value: "Text message to a Uk phone number",
+      text: "Text message to a UK phone number"
+    },
+    {
+      value: "Text message to a phone number from another country",
+      text: "Text message to a phone number from another country"
+    },
+    {
+      value: "Authenticator app",
+      text: "Authenticator app"
+    }
+  ]
+}) }}
+
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+        {{ govukTextarea({
+          name: "What-happened",
+          id: "What-happened",
+          label: {
+            text: "Anything else you want to tell us",
+            classes: "govuk-label--s",
+            isPageHeading: true
+          },
+          hint: {
+            text: "For example, if you want to add more detail or give us feedback"
+          }
+        }) }}
+        {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+        {{ govukWarningText({
+          text: "Do not include personal or financial information, for example your National Insurance number or credit card details.",
+          iconFallbackText: "Warning"
+        }) }}
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% set emailHtml %}
+        {{ govukInput({
+          id: "Yes-by-email",
+          name: "Yes-by-email",
+          type: "email",
+          spellcheck: false,
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            text: "Email address"
+          },
+          hint: {
+            text: "We will only use this to reply to your message"
+          }
+        }) }}
+        {{ govukInput({
+          id: "name",
+          name: "name",
+          type: "text",
+          spellcheck: false,
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            text: "Name (Optional)"
+          }
+        }) }}
+        <br>
+        <p class="govuk-body">Read our <a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link" rel="noreferrer noopener" target="_blank">privacy notice</a> for more information on how we use your personal information.</p>
+  {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "contact-by-email",
+          name: "contact-by-email",
+          value: "Yes",
+          fieldset: {
+            legend: {
+              text: "Can we reply to you by email?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes",
+              conditional: {
+                html: emailHtml
+              }
+            },
+            {
+              value: "No",
+              text: "No",
+              conditional: {
+                html: phoneHtml
+              }
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">
+          Send message
+        </button>
+
+      </form>
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-shown">Useful links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/">
+              Go to contact centre home
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/exploratory-concepts/index">
+              Go to journey concepts
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</footer>
+{% endblock %}

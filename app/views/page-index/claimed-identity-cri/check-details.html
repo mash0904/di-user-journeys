@@ -1,0 +1,119 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Confirm your details
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container"></div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<h1 class="govuk-heading-l page-heading">Confirm your details</h1>
+
+
+<form action="" method="post" class="form">
+
+<div class="govuk-warning-text">
+<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+<strong class="govuk-warning-text__text">
+ <span class="govuk-warning-text__assistive">Warning</span>
+ Make sure the details you entered match the details on your photo ID. 
+</strong>
+</div>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+
+        <div id="enter-id" class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+ John Alan Doe
+ 
+
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+              Change<span class="govuk-visually-hidden"> Date of birth</span>
+            </a> -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link--no-visited-state" href="offline-full-name">
+              Change<span class="govuk-visually-hidden"> Name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div id="enter-id" class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth 
+       
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+ 31 03 1980
+ 
+
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+              Change<span class="govuk-visually-hidden"> Date of birth</span>
+            </a> -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link--no-visited-state" href="offline-dob">
+              Change<span class="govuk-visually-hidden"> Date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+
+
+    </dl>
+
+
+
+
+
+
+<input type="hidden" name="_csrf" value="FfwQ72tV-H9h3OqJX3pxZDmQJ56_UAUeYE9g">
+
+<a href="./offline-next-address" type="submit" class="govuk-button" id="save-and-continue" role="button">I confirm my details are correct</a>
+
+
+
+
+
+</form></div>
+</div>
+
+{% endblock %}
