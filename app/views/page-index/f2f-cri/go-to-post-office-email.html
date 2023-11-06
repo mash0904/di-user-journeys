@@ -1,0 +1,50 @@
+{% extends "layouts/email.html" %}
+
+{% block pageTitle %}
+Go to post office email
+{% endblock %}
+
+{% set subject = "Take this attachement and your photo ID to a Post Office" %}
+{% set from = "GOV.UK <example@gov.uk>" %}
+{% set to = "John Doe <john.doe@example.com>" %}
+
+{% block content %}
+  <p>Hi John Doe,</p>
+
+  <h3 class="govuk-heading-s">Bring the following to the Post Office</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Your chosen photo ID</li>
+    <li>The attachement in this email</li>
+  </ul>
+
+  <p>You can bring a printed copy of the attachement or display it on your smartphone.</p>
+
+  <p>If you print out this confirmation email, make sure to print out the attachement as well.</p>
+
+  <p class="govuk-body">
+   Not all Post Offices offer this service. You can <a href="#" class="govuk-link">find your nearest Post Office that offers in branch verification here (opens in new tab)</a>.
+  </p>
+
+  <h3 class="govuk-heading-s">After you've visited the Post Office</h3>
+
+  <p>We'll email you with the outcome of your identity check. If you've successfully proved your identity, sign into your GOV.UK One Login to access the service you need.</p>
+
+  <h3 class="govuk-heading-s">If you need help</h3>
+
+  <p class="govuk-body">
+    <a href="#" class="govuk-link">Contact us (opens in new tab)</a>
+  </p>
+
+  <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-9">
+
+  <nav class="govuk-pagination govuk-pagination--block govuk-!-margin-top-1" role="navigation" aria-label="results">
+    <div class="govuk-pagination__next">
+      <a class="govuk-link govuk-pagination__link" href="/page-index/f2f-cri/outcome-email" rel="next"> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+        </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
+        <span class="govuk-pagination__link-label">User goes to the Post Office</span></a>
+    </div>
+  </nav>
+
+{% endblock %}
