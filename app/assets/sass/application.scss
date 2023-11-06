@@ -3603,3 +3603,312 @@ $email-width: 650px;
 .hods-highlight::after {
     content: " [highlight end] "
 }
+
+
+
+//action link
+
+.gem-c-action-link {
+  display: table
+}
+
+.gem-c-action-link::before {
+  content: "";
+  display: table-cell;
+  width: 60px;
+  height: 45px;
+  background: url(/assets/govuk_publishing_components/action-link-arrow-f03d44e13c1da83fb61b8c21bf05656f12c6b45b7e33938f3a3fd2b7aa5467a6.png);
+  background: url(/assets/govuk_publishing_components/action-link-arrow-af86a11f723d53bbd5d6e69f6d940f4c7b889b039913a98005db11fcba8fdce1.svg),linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 45px auto
+}
+
+@media (max-width: 40.0525em) {
+  .gem-c-action-link {
+      max-width:410px
+  }
+}
+
+.gem-c-action-link__contents-wrapper {
+  display: table-cell;
+  vertical-align: middle
+}
+
+.gem-c-action-link__link-wrapper {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.3;
+  display: table-cell;
+  vertical-align: middle
+}
+
+@media print {
+  .gem-c-action-link__link-wrapper {
+      font-family: sans-serif
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-action-link__link-wrapper {
+      font-size:19px;
+      font-size: 1.1875rem;
+      line-height: 1.3
+  }
+}
+
+@media print {
+  .gem-c-action-link__link-wrapper {
+      font-size: 14pt;
+      line-height: 1.3
+  }
+}
+
+.gem-c-action-link__link {
+  color: inherit
+}
+
+.gem-c-action-link__link:focus {
+  text-decoration: none;
+  color: #0b0c0c
+}
+
+.gem-c-action-link__nowrap-text {
+  white-space: nowrap
+}
+
+.gem-c-action-link--with-subtext {
+  max-width: none
+}
+
+.gem-c-action-link--with-subtext .gem-c-action-link__link-wrapper,.gem-c-action-link--with-subtext .gem-c-action-link__subtext-wrapper {
+  display: block
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-action-link--with-subtext .gem-c-action-link__link-wrapper,.gem-c-action-link--with-subtext .gem-c-action-link__subtext-wrapper {
+      display:table-cell;
+      vertical-align: middle
+  }
+}
+
+.gem-c-action-link--mobile-subtext .gem-c-action-link__subtext-wrapper {
+  display: block
+}
+
+.gem-c-action-link--mobile-subtext .gem-c-action-link__subtext {
+  padding: 0
+}
+
+.gem-c-action-link--mobile-subtext .gem-c-action-link__subtext::before {
+  display: none
+}
+
+.gem-c-action-link__subtext {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  display: block;
+  font-weight: normal;
+  color: inherit
+}
+
+@media print {
+  .gem-c-action-link__subtext {
+      font-family: sans-serif
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-action-link__subtext {
+      font-size:19px;
+      font-size: 1.1875rem;
+      line-height: 1.3157894737
+  }
+}
+
+@media print {
+  .gem-c-action-link__subtext {
+      font-size: 14pt;
+      line-height: 1.15
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-action-link__subtext {
+      position:relative;
+      padding-left: 20px
+  }
+
+  .gem-c-action-link__subtext::before {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 10px;
+      width: 10px;
+      height: 80%;
+      border-left: solid 1px #0b0c0c
+  }
+}
+
+.gem-c-action-link--white-arrow::before {
+  background-image: url(/assets/govuk_publishing_components/action-link-arrow--white-e5fb168299818bae0a46b326be4b7ec7bb0eb934f5134f73cb711f5db8e6e492.png);
+  background-image: url(/assets/govuk_publishing_components/action-link-arrow--white-cf3c4f860fc8e78a34703643bb16ccc61ae066a6f109e1b5e75ee68f0c810d5e.svg),linear-gradient(transparent, transparent)
+}
+
+.gem-c-action-link--blue-arrow::before {
+  width: 36px;
+  height: 28px;
+  background: url(/assets/govuk_publishing_components/action-link-arrow--blue-9241f10f2f17f35abcdcbc03a20e4ba85f405fb263a423740dd7a28e739ae6a6.png);
+  background: url(/assets/govuk_publishing_components/action-link-arrow--blue-1e1a8c243261e343425ba560d92bd5f1df07baeea9d1bde261b424da1271745c.svg),linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  background-size: 28px auto;
+  background-position: 0 0
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-action-link--blue-arrow::before {
+      width:45px;
+      height: 35px;
+      background-size: 35px auto
+  }
+}
+
+.gem-c-action-link--simple::before {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/govuk_publishing_components/action-link-arrow--simple-f835aeb28f0cd79f8e5fef6dc3ea7a7ed9b18021307407a089b8e7d913394985.png);
+  background: url(/assets/govuk_publishing_components/action-link-arrow--simple-e2d682f26616684ee3575cf98ebeb00f2f12136f1033b86c0454b2aec5264fb8.svg),linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  background-position: 0 2px
+}
+
+.gem-c-action-link--simple-light::before {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/govuk_publishing_components/action-link-arrow--simple-light-d813942af697ea743815779c294579acb7ffda4f903d8197582cc60638be8f60.png);
+  background: url(/assets/govuk_publishing_components/action-link-arrow--simple-light-404cfd5992e74d48ac785545369ce0368ef54590a692afa37b1b50035b13a0e8.svg),linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  background-position: 0 2px
+}
+
+.gem-c-action-link--dark-icon::before {
+  background: url(/assets/govuk_publishing_components/action-link-arrow--dark-4cee5b4d02aca76b337e01239da928971f983162c4ed7bf5790ffb6224a7cc5d.png);
+  background: url(/public/images/action-link-arrow--dark-10605f4789013a507e50cf1cb80fe28e89f09220d9d6bb659737f2a9bae94562.svg),linear-gradient(transparent, transparent)
+}
+
+.gem-c-action-link--dark-large-icon::before {
+  background: url(/assets/govuk_publishing_components/action-link-arrow--dark-4cee5b4d02aca76b337e01239da928971f983162c4ed7bf5790ffb6224a7cc5d.png);
+  background: url(/public/images/action-link-arrow--dark-10605f4789013a507e50cf1cb80fe28e89f09220d9d6bb659737f2a9bae94562.svg),linear-gradient(transparent, transparent);
+  height: 34px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: 32px auto;
+  background-position: 0 2px
+}
+
+@media (max-width: 40.0525em) {
+  .gem-c-action-link--dark-large-icon {
+      margin-bottom:10px
+  }
+}
+
+.gem-c-action-link--light-icon::before {
+  width: 36px;
+  height: 28px;
+  background: url(/assets/govuk_publishing_components/action-link-arrow--light-59f491aa0621dd989d37a925da82996096cad28f276565d6f48d354ac5f9d6c4.png);
+  background: url(/assets/govuk_publishing_components/action-link-arrow--light-9b90cf8bd25ec0d02d559e212d6e5fcaae50452c72ddd7a1f6f4f7d8666eef8e.svg),linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  background-size: 28px auto;
+  background-position: 0 0
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-action-link--light-icon::before {
+      width:45px;
+      height: 35px;
+      background-size: 35px auto
+  }
+}
+
+.gem-c-action-link--dark-icon,.gem-c-action-link--small-icon {
+  max-width: none
+}
+
+@media (max-width: 40.0525em) {
+  .gem-c-action-link--dark-icon,.gem-c-action-link--small-icon {
+      margin-bottom:10px
+  }
+}
+
+.gem-c-action-link--dark-icon::before,.gem-c-action-link--small-icon::before {
+  height: 30px;
+  width: 35px;
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  background-position: 0 2px
+}
+
+.gem-c-action-link--transparent-icon::before {
+  background-image: url(/assets/govuk_publishing_components/action-link-arrow--transparent-bec06cc283979226b8f511bb8ab9f76acba7ef2496cfd75f9feeecc7dc33cdb3.svg)
+}
+
+.gem-c-action-link--brexit {
+  max-width: none
+}
+
+.gem-c-action-link--brexit::before {
+  height: 30px;
+  width: 30px;
+  background-image: url(/assets/govuk_publishing_components/action-link-arrow--brexit-bbb73ad0e8566c88e91ea3db3fa7d940330c007b78d686717d155e33101eedee.svg);
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  background-position: 0 2px
+}
+
+@media (max-width: 40.0525em) {
+  .gem-c-action-link--brexit {
+      margin-bottom:10px
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-action-link--brexit {
+      margin-bottom:10px
+  }
+
+  .gem-c-action-link--brexit::before {
+      width: 35px;
+      background-position: 0 4px;
+      background-size: 25px auto
+  }
+}
+
+.gem-c-action-link--nhs::before {
+  width: 80px;
+  height: 70px;
+  background: url(/assets/govuk_publishing_components/action-link--nhs-f191891db443913170044d7b2542aabf2420d2e2b86c555dd1a99532764f3c30.png);
+  background: url(/assets/govuk_publishing_components/action-link--nhs-f535cd705bc805dce628cbba0891bb0d00e589f32dc7b7a877ea42a1f4c517eb.svg),linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  background-size: 85% auto;
+  background-position: 0 50%
+}
+
+.gem-c-action-link--light-text {
+  color: #fff
+}
+
+.gem-c-action-link--light-text .gem-c-action-link__subtext::before {
+  border-color: #fff
+}
+

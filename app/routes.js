@@ -195,39 +195,19 @@ router.post('/flashing-colours/answer', function (req, res) {
 })
 
 
+// Run this code when a form is submitted to '/id-screener/answer'
+router.post('/id-screener/answer', function (req, res) {
 
-//round 1 research
-
-// Run this code when a form is submitted to '/problem-creating-account-answer'
-router.post('/problem-creating-account-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'choose-security-codes'
-  var problemcreatingaccount = req.session.data['problem-creating-account']
+  // Make a variable and give it the value from 'flashing-colours'
+  var typeofid = req.session.data['type-of-id'];
 
   // Check whether the variable matches a condition
-  if (problemcreatingaccount == "The security code did not work"){
-    // Send user to security code did not work
-    res.redirect('/user-research/round1/Task-1/send-email/security-code-does-not-work')
+  if (typeofid == "No"){
+    // Send user to next eligibility question
+    res.redirect('/page-index/ipv-core/id-screener-2')
   } else {
-    // Send user to enter security code not received
-    res.redirect('/user-research/round1/Task-1/send-email/security-code-not-received')
-  }
-
-})
-
-// Run this code when a form is submitted to '/report-problem-or-give-feedback-answer'
-router.post('/report-problem-or-give-feedback-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'contact about'
-  var contactabout = req.session.data['contact-about']
-
-  // Check whether the variable matches a condition
-  if (contactabout == "A suggestion or feedback about using your GOV.UK One Login"){
-    // Send user to give feedback
-    res.redirect('/user-research/round1/Task-1/send-email/feedback')
-  } else {
-    // Send user to problem creating account
-    res.redirect('/user-research/round1/Task-1/send-email/problem-creating-account')
+    // Send user to security questions
+    res.redirect('/page-index/app-cri/computer-or-tablet')
   }
 
 })
@@ -235,83 +215,19 @@ router.post('/report-problem-or-give-feedback-answer', function (req, res) {
 
 
 
+// Run this code when a form is submitted to '/id-screener-2/answer'
+router.post('/id-screener-2/answer', function (req, res) {
 
-//round 2 research
-
-// Run this code when a form is submitted to '/problem-creating-account-answer'
-router.post('/round2/Task-1/send-email/problem-creating-account-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'choose-security-codes'
-  var problemcreatingaccount = req.session.data['problem-creating-account']
+  // Make a variable and give it the value from 'flashing-colours'
+  var postofficeid = req.session.data['post-office-id'];
 
   // Check whether the variable matches a condition
-  if (problemcreatingaccount == "The security code did not work"){
-    // Send user to security code did not work
-    res.redirect('/user-research/round2/Task-1/send-email/security-code-does-not-work')
+  if (postofficeid == "No"){
+    // Send user to next eligibility question
+    res.redirect('/')
   } else {
-    // Send user to enter security code not received
-    res.redirect('/user-research/round2/Task-1/send-email/security-code-not-received')
+    // Send user to security questions
+    res.redirect('/page-index/claimed-identity-cri/name')
   }
 
 })
-
-// Run this code when a form is submitted to '/report-problem-or-give-feedback-answer'
-router.post('/round2/Task-1/send-email/report-problem-or-give-feedback-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'contact about'
-  var contactabout = req.session.data['contact-about']
-
-  // Check whether the variable matches a condition
-  if (contactabout == "A suggestion or feedback about using your GOV.UK One Login"){
-    // Send user to give feedback
-    res.redirect('/user-research/round2/Task-1/send-email/feedback')
-  } else {
-    // Send user to problem signing in
-    res.redirect('/user-research/round2/Task-1/send-email/problem-signing-in')
-  }
-
-})
-
-
-
-
-
-
-
-
-//MVP journey concept
-
-// Run this code when a form is submitted to '/problem-creating-account-answer'
-router.post('/exploratory-concepts/v1/send-email/problem-creating-account-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'choose-security-codes'
-  var problemcreatingaccount = req.session.data['problem-creating-account']
-
-  // Check whether the variable matches a condition
-  if (problemcreatingaccount == "The security code did not work"){
-    // Send user to security code did not work
-    res.redirect('/exploratory-concepts/v1/send-email/security-code-does-not-work')
-  } else {
-    // Send user to enter security code not received
-    res.redirect('/exploratory-concepts/v1/send-email/security-code-not-received')
-  }
-
-})
-
-// Run this code when a form is submitted to '/report-problem-or-give-feedback-answer'
-router.post('/exploratory-concepts/v1/send-email/report-problem-or-give-feedback-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'contact about'
-  var contactabout = req.session.data['contact-about']
-
-  // Check whether the variable matches a condition
-  if (contactabout == "A suggestion or feedback about using your GOV.UK One Login"){
-    // Send user to give feedback
-    res.redirect('/exploratory-concepts/v1/send-email/feedback')
-  } else {
-    // Send user to problem signing in
-    res.redirect('/exploratory-concepts/v1/send-email/problem-signing-in')
-  }
-
-})
-
